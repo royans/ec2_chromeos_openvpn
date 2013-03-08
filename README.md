@@ -1,14 +1,14 @@
+EC2+OpenVPN+ChromeBooks
+=======================
 
-EC2+OpenVPN+ChromeBooks = Secure communcation
-=============================================
 * ChromeBook is a great travel companion
 * EC2 is a perfect service to launch a VPN endpoint on
 * OpenVPN works both with ChromeBook and EC2
 * This script makes all 3 work together to provide secure connection from
   locations you don't trust (coffee shops, hotels, airports... etc)
 
-Details
-=======
+How is it done
+==============
 
 * Openvpn generates an .ovpn file which cannot be used by ChromeBooks.
 * This script generates a .onc file which chromebooks can understand.
@@ -16,8 +16,8 @@ Details
 * The file is sent by mail to the user who can just download it, import it and connect to openvpn server immediately.
 
 
-How to setup openvpn - slightly longer
-======================================
+Detailed setup
+==============
 
 This script is specifically written for amazons EC2 instance using amazons linux distribution
 
@@ -31,8 +31,10 @@ curl https://nodeload.github.com/royans/ec2_chromeos_openvpn/zip/master > m.zip;
    + When you get prompts, just press enter to select the default values
 * Step 5: Read the "What to do on chromebooks" below to see how to import the ONC file.
 
-How to setup openvpn - Really quick
-===================================
+Quick setup
+===========
+If you don't want to worry about customizing the certificate, just run this on
+EC2 instance.
 
 ```
 curl https://raw.github.com/royans/ec2_chromeos_openvpn/master/quicksetup.sh > quicksetup.sh; 
@@ -61,5 +63,4 @@ Notes
      - package manager may be different. 
      - I parse output from a few binaries to do things automatically... u may have to test them to make sure format changes don't break the script.
 
-* This set of scripts is available on github. Please feel free to fork this and send me back changes which I could incorporate into this.
-
+* Updated info here: https://github.com/royans/ec2_chromeos_openvpn/blob/master/README.md
