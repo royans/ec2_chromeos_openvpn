@@ -23,7 +23,7 @@ then
   echo ""
   exit 1
 fi
-export KEY_EMAIL
+export KEY_EMAIL=$1
 
 
 ./cleanup.sh  
