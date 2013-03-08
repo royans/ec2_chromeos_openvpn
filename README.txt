@@ -1,1 +1,0 @@
-openvpn configuration for chromebooks
