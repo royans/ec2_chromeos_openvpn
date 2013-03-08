@@ -20,10 +20,11 @@ This script is specifically written for amazons EC2 instance using amazons linux
 Really quick
 ============
 
+```
 curl https://raw.github.com/royans/ec2_chromeos_openvpn/master/quicksetup.sh > quicksetup.sh; 
 chmod +x quicksetup.sh;
 ./quicksetup.sh email_address@blogofy.com
-
+```
 
 Notes
 =====
