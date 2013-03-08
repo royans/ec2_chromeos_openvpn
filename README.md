@@ -1,23 +1,35 @@
 
 EC2+OpenVPN+ChromeBooks = Secure communcation
 =============================================
-The goal of this bunch of scripts is to 
-* Make it very very easy to launch and amazon EC2 instance with openvpn server which you could use from chromebook.  
-* This is a highly recommended way to browse internet from locations you don't trust (coffee shops, hotels, airports, etc).  
-* Instead of keeping EC2 instance always running, this script allows you to setup an openvpn server in a few seconds after an EC2 instance is launched. 
-* It mail you an "onc" (OpenNetworkConfiguration file is configuration format used by ChromeOS) file which you could import into chromebook to quickly go online.
+* ChromeBook is a great travel companion
+* EC2 is a perfect service to launch a VPN endpoint on
+* OpenVPN works both with ChromeBook and EC2
+* This script makes all 3 work together to provide secure connection from
+  locations you don't trust (coffee shops, hotels, airports... etc)
+
+Details
+=======
+
+* Openvpn generates an .ovpn file which cannot be used by ChromeBooks.
+* This script generates a .onc file which chromebooks can understand.
+* This script will generate the certs and the openvpn server configuration required.
+* The file is sent by mail to the user who can just download it, import it and connect to openvpn server immediately.
+
 
 How to setup openvpn - slightly longer
 ======================================
 
 This script is specifically written for amazons EC2 instance using amazons linux distribution
 
-* Step 1: Boot up instance and pull these files in
+* Step 1: Boot up an EC2 instance using Amazon's linux distribution
+* Step 2: Get the scripts...
 ```
 curl https://nodeload.github.com/royans/ec2_chromeos_openvpn/zip/master > m.zip; unzip m.zip
 ```
-* Step 2: Update vars.sh
-* Step 3: Run setup.sh <email_address>
+* Step 3: Update vars.sh
+* Step 4: Run setup.sh <email_address>
+   + When you get prompts, just press enter to select the default values
+* Step 5: Read the "What to do on chromebooks" below to see how to import the ONC file.
 
 How to setup openvpn - Really quick
 ===================================
