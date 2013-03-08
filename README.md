@@ -1,6 +1,6 @@
 
-ec2_chromeos_openvpn
-====================
+EC2+OpenVPN+ChromeBooks = Secure communcation
+=============================================
 The goal of this bunch of scripts is to 
 * Make it very very easy to launch and amazon EC2 instance with openvpn server which you could use from chromebook.  
 * This is a highly recommended way to browse internet from locations you don't trust (coffee shops, hotels, airports, etc).  
@@ -14,8 +14,7 @@ This script is specifically written for amazons EC2 instance using amazons linux
 
 * Step 1: Boot up instance and pull these files in
 ```
-curl https://nodeload.github.com/royans/ec2_chromeos_openvpn/zip/master > m.zip
-unzip m.zip
+curl https://nodeload.github.com/royans/ec2_chromeos_openvpn/zip/master > m.zip; unzip m.zip
 ```
 * Step 2: Update vars.sh
 * Step 3: Run setup.sh <email_address>
