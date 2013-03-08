@@ -2,7 +2,7 @@
 
 if [ "$1" == "" ]
 then
-  echo "Usage: ./quick.sh <email@address>"
+  echo "Usage: ./quicksetup.sh <email@address>"
   echo "       - The email address should belong to the user who needs to get the onc certificate."
   echo "       - For example: ./quick.sh test@blogofy.com"
   echo ""

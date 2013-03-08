@@ -7,8 +7,8 @@ The goal of this bunch of scripts is to
 * Instead of keeping EC2 instance always running, this script allows you to setup an openvpn server in a few seconds after an EC2 instance is launched. 
 * It mail you an "onc" (OpenNetworkConfiguration file is configuration format used by ChromeOS) file which you could import into chromebook to quickly go online.
 
-How to
-======
+How to - slightly longer
+========================
 
 This script is specifically written for amazons EC2 instance using amazons linux distribution
 
@@ -16,6 +16,14 @@ This script is specifically written for amazons EC2 instance using amazons linux
 * Step 2: Update vars.sh
 * Step 3: Run setup.sh
 * Step 4: The email address you setup in vars.sh should get an email with the onc file which you should be able to import into chromebooks.
+
+Really quick
+============
+
+curl https://raw.github.com/royans/ec2_chromeos_openvpn/master/quicksetup.sh > quicksetup.sh; 
+chmod +x quicksetup.sh;
+./quicksetup.sh email_address@blogofy.com
+
 
 Notes
 =====

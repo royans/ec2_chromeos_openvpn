@@ -24,9 +24,9 @@ then
   exit 1
 fi
 export KEY_EMAIL=$1
-
+echo $KEY_EMAIL
 
 ./cleanup.sh  
 ./server_init.sh 
-./openvpn_config.sh 
+./openvpn_config.sh  $KEY_EMAIL
 

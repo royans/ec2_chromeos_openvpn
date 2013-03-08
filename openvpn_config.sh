@@ -6,6 +6,17 @@ cd /etc/openvpn/easy-rsa/
 source vars
 source $ME/vars.sh
 
+if [ "$1" == "" ]
+then
+  echo "Usage: ./openvpn_config.sh <email@address>"
+  echo "       - The email address should belong to the user who needs to get the onc certificate."
+  echo "       - For example: ./openvpn_config.sh test@blogofy.com"
+  echo ""
+  exit 1
+fi
+export KEY_EMAIL=$1
+
+
 echo "Cleanup old stuff"
 ./clean-all
 
