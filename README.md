@@ -6,6 +6,8 @@ EC2+OpenVPN+ChromeBooks
 * OpenVPN works both with ChromeBook and EC2
 * This script makes all 3 work together to provide secure connection from
   locations you don't trust (coffee shops, hotels, airports... etc)
+* Step by Step guide with screenshots can be found here:
+   - http://porttwentytwo.blogspot.com/2013/03/openvpn-in-ec2-for-chromebooks-part-2.html
 
 How is it done
 ==============
@@ -22,11 +24,17 @@ Detailed setup
 This script is specifically written for amazons EC2 instance using amazons linux distribution
 
 * Step 1: Boot up an EC2 instance using Amazon's linux distribution
+   + Use t1.micro if you want the cheapest solution
+   + Use one of the latest versions of "Amazon Linux AMI" images, which is what
+     this set of scripts is compatible with.
+   + Whatever "security group" you pick, make sure you have 443,1193-1194 opened
+     up for both TCP/UDP
 * Step 2: Get the scripts...
 ```
 curl https://nodeload.github.com/royans/ec2_chromeos_openvpn/zip/master > m.zip; unzip m.zip
 ```
 * Step 3: Update vars.sh
+   + This step is optional.
 * Step 4: Run setup.sh <email_address>
    + When you get prompts, just press enter to select the default values
 * Step 5: Read the "What to do on chromebooks" below to see how to import the ONC file.
@@ -37,7 +45,7 @@ If you don't want to worry about customizing the certificate, just run this on
 EC2 instance.
 
 ```
-curl https://raw.github.com/royans/ec2_chromeos_openvpn/master/quicksetup.sh > quicksetup.sh; 
+curl https://raw.github.com/royans/ec2_chromeos_openvpn/master/quicksetup.sh > quicksetup.sh;
 chmod +x quicksetup.sh;
 sudo ./quicksetup.sh email_address@blogofy.com
 ```
