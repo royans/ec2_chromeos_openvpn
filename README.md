@@ -72,3 +72,9 @@ Notes
      - I parse output from a few binaries to do things automatically... u may have to test them to make sure format changes don't break the script.
 
 * Updated info here: https://github.com/royans/ec2_chromeos_openvpn/blob/master/README.md
+
+
+Contributors
+============
+* Special thanks to the Ralf Robert Stebner who contributed the core script which did cert conversions and created ONC template:
+  He can be found at: https://plus.google.com/114451000525400904136/
