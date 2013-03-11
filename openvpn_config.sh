@@ -30,7 +30,10 @@ echo "Create Server key/certificate"
 ./pkitool --server server 
 
 echo "For each client, create key/certificate. We are just going to do for one"
-./build-key-pkcs12 --pkcs12 $clientname
+#./build-key-pkcs12 --pkcs12 $clientname
+export KEY_CN="$clientname_$STAMP"
+./pkitool  --pkcs12 $clientname
+
 
 echo "Some of the following key manipulation suggessions were from Ralph Stebner"
 echo "Create x509 client certificate in .PEM format"
