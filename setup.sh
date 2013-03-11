@@ -2,7 +2,7 @@
 # royans@gmail.com - Mar 2013
 
 
-uname -a | grep amzn1.i686 2> /dev/null > /dev/null
+uname -a | grep .amzn1. 2> /dev/null > /dev/null
 if [ $? -eq 1 ]
 then
   echo "You are not running this script from amazon's distribution on amazon's cloud."
